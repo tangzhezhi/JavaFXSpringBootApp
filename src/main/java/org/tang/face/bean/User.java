@@ -9,7 +9,7 @@ import java.time.LocalDate;
  */
 
 @Entity
-@Table(name="User")
+@Table(name="face_user")
 public class User {
 
 	@Id
@@ -17,21 +17,10 @@ public class User {
 	@Column(name = "id", updatable = false, nullable = false)
 	private long id;
 	
-	private String firstName;
+	private String userName;
 	
-	private String lastName;
-	
-	private LocalDate dob;
-	
-	private String gender;
-	
-	private String role;
-	
-	private String email;
-	
-	private String password;
+	private int recogniseCode;
 
-	
 	public long getId() {
 		return id;
 	}
@@ -40,67 +29,28 @@ public class User {
 		this.id = id;
 	}
 
-	public String getFirstName() {
-		return firstName;
+	public String getUserName() {
+		return userName;
 	}
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 
-	public String getLastName() {
-		return lastName;
+	public int getRecogniseCode() {
+		return recogniseCode;
 	}
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-	
-	public LocalDate getDob() {
-		return dob;
-	}
-
-	public void setDob(LocalDate dob) {
-		this.dob = dob;
-	}
-	
-	public String getGender() {
-		return gender;
-	}
-
-	public void setGender(String gender) {
-		this.gender = gender;
-	}
-	
-	public String getRole() {
-		return role;
-	}
-
-	public void setRole(String role) {
-		this.role = role;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
+	public void setRecogniseCode(int recogniseCode) {
+		this.recogniseCode = recogniseCode;
 	}
 
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", dob=" + dob + ", email="
-				+ email + "]";
+		return "User{" +
+				"id=" + id +
+				", userName='" + userName + '\'' +
+				", recogniseCode=" + recogniseCode +
+				'}';
 	}
-
-	
 }

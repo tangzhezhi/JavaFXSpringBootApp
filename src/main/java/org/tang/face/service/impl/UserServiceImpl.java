@@ -50,8 +50,7 @@ public class UserServiceImpl implements UserService {
 		if(user == null){
 			return false;
 		}else{
-			if(password.equals(user.getPassword())) return true;
-			else return false;
+			return true;
 		}
 	}
 

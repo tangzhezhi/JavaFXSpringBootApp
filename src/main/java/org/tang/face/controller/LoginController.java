@@ -92,7 +92,7 @@ public class LoginController implements Initializable {
         loggingProgress.setVisible(false);
         if (isValidInput()) {
             User user=new User();
-            user.setEmail(txtUsername.getText());
+            user.setUserName(txtUsername.getText());
 
             if(userService.authenticate(txtUsername.getText(), txtPassword.getText())){
 
