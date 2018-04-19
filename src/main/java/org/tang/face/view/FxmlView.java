@@ -3,7 +3,8 @@ package org.tang.face.view;
 import java.util.ResourceBundle;
 
 public enum FxmlView {
-    USER {
+
+    FACE_MAIN {
         @Override
         public String getTitle() {
             return getStringFromResourceBundle("user.title");
@@ -11,7 +12,7 @@ public enum FxmlView {
 
         @Override
         public String getFxmlFile() {
-            return "/fxml/User.fxml";
+            return "/fxml/Face_Main.fxml";
         }
     },
 

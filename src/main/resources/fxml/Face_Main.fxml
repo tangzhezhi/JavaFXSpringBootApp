@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<BorderPane prefHeight="600.0" prefWidth="800.0" stylesheets="@../styles/face-styles.css" xmlns="http://javafx.com/javafx/8.0.72" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.tang.face.controller.FaceMainController">
+   <top>
+      <MenuBar BorderPane.alignment="TOP_LEFT">
+        <menus>
+          <!--<Menu mnemonicParsing="false" text="File">-->
+            <!--<items>-->
+              <!--<MenuItem mnemonicParsing="false" onAction="#exit" text="Exit" />-->
+            <!--</items>-->
+          <!--</Menu>-->
+        </menus>
+      </MenuBar>
+   </top>
+   <left>
+      <VBox prefHeight="571.0" prefWidth="266.0" spacing="10.0" styleClass="background" stylesheets="@../styles/Styles.css" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="人员信息" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="20.0" top="30.0" />
+               </VBox.margin>
+            </Label>
+
+             <JFXTextField fx:id="userName"  prefHeight="30.0" prefWidth="246.0" editable="false" promptText="姓名 " unFocusColor="#8a8585">
+                 <VBox.margin>
+                     <Insets left="25.0" right="25.0" />
+                 </VBox.margin>
+             </JFXTextField>
+
+             <JFXTextField fx:id="departName"  prefHeight="30.0" prefWidth="246.0" editable="false" promptText="班级/部门 " unFocusColor="#8a8585">
+                 <VBox.margin>
+                     <Insets left="25.0" right="25.0" />
+                 </VBox.margin>
+             </JFXTextField>
+
+            <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="255.0" spacing="15.0">
+               <children>
+                  <RadioButton fx:id="rbMale" mnemonicParsing="false" selected="true" text="男" textFill="WHITE">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="gender" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="rbFemale" mnemonicParsing="false" text="女" textFill="WHITE" toggleGroup="$gender">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </RadioButton>
+               </children>
+               <VBox.margin>
+                  <Insets left="25.0" right="25.0" />
+               </VBox.margin>
+            </HBox>
+
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </VBox>
+   </left>
+   <center>
+      <VBox alignment="TOP_RIGHT" prefHeight="571.0" prefWidth="692.0" BorderPane.alignment="CENTER" stylesheets="@../styles/Styles.css" >
+         <children>
+            <HBox alignment="TOP_RIGHT" prefHeight="41.0" prefWidth="640.0">
+               <children>
+                   <TitledPane alignment="CENTER" collapsible="false" ellipsisString="" lineSpacing="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="712.0" text="人脸识别" textAlignment="CENTER" textOverrun="LEADING_WORD_ELLIPSIS" wrapText="true" BorderPane.alignment="CENTER">
+                       <content>
+                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="485.0" prefWidth="749.0">
+                                <children>
+                                    <ImageView fx:id="frame" fitHeight="417.0" fitWidth="601.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                                        <viewport>
+                                            <Rectangle2D width="600.0" />
+                                        </viewport>
+                                    </ImageView>
+                                    <Button fx:id="startCam" layoutX="3.0" layoutY="425.0" mnemonicParsing="false" onAction="#startCamera" prefHeight="55.0" prefWidth="102.0" styleClass="startCamera" />
+                                    <Button id="saveFace" fx:id="saveBtn" disable="true" layoutX="109.0" layoutY="425.0" mnemonicParsing="false" onAction="#saveFace" prefHeight="55.0" prefWidth="91.0" styleClass="saveface"  />
+                                    <Button fx:id="recogniseBtn" disable="true" layoutX="205.0" layoutY="425.0" mnemonicParsing="false" onAction="#faceRecognise" prefHeight="55.0" prefWidth="158.0" style="-fx-background-color: gold;" styleClass="recog" >
+                                        <font>
+                                            <Font size="10.0" />
+                                        </font>
+                                    </Button>
+                                    <Button fx:id="stopBtn" layoutX="370.0" layoutY="425.0" mnemonicParsing="false" onAction="#stopCam" prefHeight="55.0" prefWidth="101.0" styleClass="stop" text="停止" visible="false" />
+                                </children>
+                           </AnchorPane>
+                       </content>
+                   </TitledPane>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

@@ -5,7 +5,6 @@
  */
 package org.tang.face.config;
 
-import com.codetreatise.logging.ExceptionWriter;
 import javafx.stage.Stage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -23,15 +22,6 @@ public class AppJavaConfig {
     @Autowired
     SpringFXMLLoader springFXMLLoader;
 
-    /**
-     * Useful when dumping stack trace to a string for logging.
-     * @return ExceptionWriter contains logging utility methods
-     */
-    @Bean
-    @Scope("prototype")
-    public ExceptionWriter exceptionWriter() {
-        return new ExceptionWriter(new StringWriter());
-    }
 
     @Bean
     public ResourceBundle resourceBundle() {

@@ -1,9 +1,9 @@
 package org.tang.face.service.impl;
 
-import com.codetreatise.bean.User;
-import com.codetreatise.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.tang.face.bean.User;
+import org.tang.face.repository.UserRepository;
 import org.tang.face.service.UserService;
 
 import java.util.List;

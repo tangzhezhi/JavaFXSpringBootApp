@@ -30,8 +30,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 import org.tang.face.Main;
+import org.tang.face.bean.User;
 import org.tang.face.config.StageManager;
-import org.tang.face.models.User;
 import org.tang.face.service.UserService;
 import org.tang.face.view.FxmlView;
 
@@ -92,11 +92,11 @@ public class LoginController implements Initializable {
         loggingProgress.setVisible(false);
         if (isValidInput()) {
             User user=new User();
-            user.setUsername(txtUsername.getText());
+            user.setEmail(txtUsername.getText());
 
             if(userService.authenticate(txtUsername.getText(), txtPassword.getText())){
 
-                stageManager.switchScene(FxmlView.USER);
+                stageManager.switchScene(FxmlView.FACE_MAIN);
 
             }else{
                 btnLogin.setText("登录失败.");
