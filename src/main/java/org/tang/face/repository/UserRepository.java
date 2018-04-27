@@ -7,5 +7,5 @@ import org.tang.face.bean.User;
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
 
-	User findByEmail(String email);
+	User findByUserName(String email);
 }

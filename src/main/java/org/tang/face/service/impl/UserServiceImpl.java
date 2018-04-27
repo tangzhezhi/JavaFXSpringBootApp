@@ -46,7 +46,7 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public boolean authenticate(String username, String password){
-		User user = this.findByEmail(username);
+		User user = this.findByUserName(username);
 		if(user == null){
 			return false;
 		}else{
@@ -55,8 +55,8 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public User findByEmail(String email) {
-		return userRepository.findByEmail(email);
+	public User findByUserName(String email) {
+		return userRepository.findByUserName(email);
 	}
 
 	@Override
