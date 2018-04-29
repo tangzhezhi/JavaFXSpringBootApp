@@ -1,8 +1,8 @@
 .root{
     -fx-background-color: #ffffff;
     -fx-font-size:14.0px;
-    -fx-font-family: Roboto;
-    src:"/fonts/Roboto-Regular.ttf";
+    /*-fx-font-family: Roboto;*/
+    /*src:"/fonts/Roboto-Regular.ttf";*/
     -swatchBlue:#3c8dbc;
     -darkSide:#222d32;
 }
@@ -12,7 +12,7 @@
 {
     -fx-min-height: 60px;
     -fx-min-width: 90px;
-    -fx-background-image: url("./imgs/onon.png");
+    -fx-background-image: url("./../imgs/onon.png");
     -fx-background-size: 50px 50px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center 7px;
@@ -24,7 +24,7 @@
 
     -fx-min-height: 60px;
     -fx-min-width: 90px;
-    -fx-background-image: url("./imgs/recognition.png");
+    -fx-background-image: url("../imgs/recognition.png");
     -fx-background-size: 50px 50px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center 7px;
@@ -34,7 +34,7 @@
 {
     -fx-min-height: 60px;
     -fx-min-width: 90px;
-    -fx-background-image: url("./imgs/face.png");
+    -fx-background-image: url("../imgs/face.png");
     -fx-background-size: 50px 50px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center 7px;
@@ -46,7 +46,7 @@
 
     -fx-min-height: 60px;
     -fx-min-width: 90px;
-    -fx-background-image: url("./imgs/stop.png");
+    -fx-background-image: url("../imgs/Stop.png");
     -fx-background-size: 50px 50px;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center 7px;

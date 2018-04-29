@@ -1,21 +1,17 @@
 package org.tang.py.fxml.controller;
 
 
-import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
-import java.awt.*;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -53,8 +49,8 @@ public class MenuController implements Initializable{
         primaryStage.setTitle("Face Recognition");
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/gui/WebCam.fxml"));
         Pane pane = (Pane) loader.load();
-        WebCamController wcc = (WebCamController) loader.getController();
-        wcc.setPrevStage(primaryStage);
+//        WebCamController wcc = (WebCamController) loader.getController();
+//        wcc.setPrevStage(primaryStage);
         Scene scene = new Scene(pane);
         primaryStage.setScene(scene);
         Stage st = (Stage)borderPane.getScene().getWindow();

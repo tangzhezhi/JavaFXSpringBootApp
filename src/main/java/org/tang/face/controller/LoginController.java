@@ -6,34 +6,25 @@
 package org.tang.face.controller;
 
 import com.jfoenix.controls.JFXButton;
-import com.jfoenix.controls.JFXDecorator;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXSpinner;
 import com.jfoenix.controls.JFXTextField;
-import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.animation.PauseTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.layout.Border;
-import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 import javafx.util.Duration;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
-import org.tang.face.Main;
 import org.tang.face.bean.User;
 import org.tang.face.config.StageManager;
 import org.tang.face.service.UserService;
 import org.tang.face.view.FxmlView;
+
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 /**
  * FXML Controller class
@@ -74,7 +65,7 @@ public class LoginController implements Initializable {
     private void loginAction(ActionEvent event) throws IOException {
         loggingProgress.setVisible(true);
         PauseTransition pauseTransition = new PauseTransition();
-        pauseTransition.setDuration(Duration.seconds(5));
+        pauseTransition.setDuration(Duration.seconds(1));
         pauseTransition.setOnFinished(ev -> {
             System.out.println("Complte one");
             completeLogin();

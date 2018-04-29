@@ -3,7 +3,7 @@ package org.tang.face;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.opencv.core.Core;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -19,6 +19,9 @@ public class Main extends Application {
     protected StageManager stageManager;
 
     public static void main(final String[] args) {
+
+        { System.loadLibrary(Core.NATIVE_LIBRARY_NAME); }
+
         Application.launch(args);
     }
 
@@ -49,6 +52,7 @@ public class Main extends Application {
 
 
     private ConfigurableApplicationContext springBootApplicationContext() {
+
         SpringApplicationBuilder builder = new SpringApplicationBuilder(Main.class);
         String[] args = getParameters().getRaw().stream().toArray(String[]::new);
         return builder.run(args);

@@ -98,7 +98,7 @@
                        <content>
                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="485.0" prefWidth="749.0">
                                 <children>
-                                    <ImageView fx:id="frame" fitHeight="417.0" fitWidth="601.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fx:id="originalFrame" fitHeight="417.0" fitWidth="601.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
                                         <viewport>
                                             <Rectangle2D width="600.0" />
                                         </viewport>
